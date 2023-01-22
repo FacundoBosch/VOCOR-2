@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;600&display=swap");
+body {
+  margin: 0px;
+  padding: 0;
+}
+
+.loader {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(49, 49, 49);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  height: 150vh;
+}
+
+.upperBanner {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  height: 4.5em;
+  width: 98%;
+  top: 0;
+  background-color: transparent;
+}
+.upperBanner .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 4.5em;
+  width: 12em;
+  margin-left: 3.5em;
+}
+.upperBanner .logo:hover {
+  cursor: pointer;
+}
+.upperBanner .botones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5em;
+  margin-right: 3em;
+}
+.upperBanner .botones .loginBut, .upperBanner .botones .registerBut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.3em;
+  color: #EB5E55;
+  font-size: 1.2em;
+  background-color: transparent;
+  border: 2px solid #EB5E55;
+  border-radius: 7px;
+  padding: 0.3em 0.7em;
+  transition: all 0.2s;
+}
+.upperBanner .botones button:hover {
+  background-color: #EB5E55;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .upperBanner {
+    flex-direction: column;
+  }
+  .upperBanner .logo {
+    margin: 0;
+  }
+  .upperBanner .botones {
+    margin: 0;
+    margin-top: 1em;
+  }
+}
+.mainTexture {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://www.indivstock.com/static33/preview2/stock-photo-image-of-exterior-wall-texture-background-486971.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
+
+.main1 {
+  width: 100%;
+  height: 100vh;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main1 .header {
+  z-index: 2;
+  width: 15em;
+  height: 8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main1 .header .mainText {
+  font-family: "Prompt";
+  font-weight: 600;
+  font-size: 100px;
+  background-image: linear-gradient(-225deg, #EB5E55 0%, #D81E5B 29%, #EB5E55 67%, #D81E5B 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: textclip 2s linear infinite;
+          animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+@-webkit-keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.main1 .planeContainer {
+  position: relative;
+  width: 25em;
+  height: 30em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main1 .planeContainer svg {
+  z-index: 1;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  color: #D81E5B;
+}
+.main1 .planeContainer .bi-airplane-fill {
+  z-index: 2;
+  position: absolute;
+  color: #EB5E55;
+  bottom: -5em;
+  width: 500px;
+  height: 500px;
+}
+.main1 .planeContainer .maletin1 {
+  -webkit-animation: movement1 2s ease-in-out forwards;
+          animation: movement1 2s ease-in-out forwards;
+}
+@-webkit-keyframes movement1 {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: translateX(-200px) translateY(-5px) rotate(15deg);
+  }
+}
+@keyframes movement1 {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: translateX(-200px) translateY(-5px) rotate(15deg);
+  }
+}
+.main1 .planeContainer .maletin2 {
+  -webkit-animation: movement2 1.5s ease-in-out forwards;
+          animation: movement2 1.5s ease-in-out forwards;
+}
+@-webkit-keyframes movement2 {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: translateX(200px) translateY(35px) rotate(-15deg);
+  }
+}
+@keyframes movement2 {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: translateX(200px) translateY(35px) rotate(-15deg);
+  }
+}
+@media (max-width: 600px) {
+  .main1 .planeContainer {
+    height: 20em;
+  }
+  .main1 .planeContainer svg {
+    width: 70px;
+    height: 70px;
+  }
+  .main1 .planeContainer .bi-airplane-fill {
+    width: 340px;
+    height: 340px;
+    bottom: -2em;
+  }
+  .main1 .planeContainer .maletin1 {
+    -webkit-animation: movement1 2s ease-in-out forwards;
+            animation: movement1 2s ease-in-out forwards;
+  }
+  @-webkit-keyframes movement1 {
+    0% {
+      transform: translateX(0px) translateY(0px);
+    }
+    100% {
+      transform: translateX(-120px) translateY(-40px) rotate(15deg);
+    }
+  }
+  @keyframes movement1 {
+    0% {
+      transform: translateX(0px) translateY(0px);
+    }
+    100% {
+      transform: translateX(-120px) translateY(-40px) rotate(15deg);
+    }
+  }
+  .main1 .planeContainer .maletin2 {
+    -webkit-animation: movement2 1.5s ease-in-out forwards;
+            animation: movement2 1.5s ease-in-out forwards;
+  }
+  @-webkit-keyframes movement2 {
+    0% {
+      transform: translateX(0px) translateY(0px);
+    }
+    100% {
+      transform: translateX(110px) translateY(5px) rotate(-15deg);
+    }
+  }
+  @keyframes movement2 {
+    0% {
+      transform: translateX(0px) translateY(0px);
+    }
+    100% {
+      transform: translateX(110px) translateY(5px) rotate(-15deg);
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  .main1 {
+    padding-top: 2.5em;
+  }
+}
+.main2 {
+  width: 100%;
+  height: 65vh;
+  background-color: rgb(234, 234, 234);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main2 .middleText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1.5em;
+}
+.main2 .middleText span {
+  font-size: 40px;
+  font-weight: 300;
+  font-family: "Prompt";
+}
+.main2 .middleBotones {
+  width: 80%;
+  height: 15em;
+  margin-top: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main2 .middleBotones button {
+  width: 10em;
+  height: 10em;
+  margin: 1em;
+  padding: 0.5em;
+  background-color: white;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 0 0.7em rgb(70, 70, 70);
+  font-size: 1.6em;
+  font-family: "Prompt";
+  font-weight: 300;
+}
+.main2 .middleBotones button:hover {
+  cursor: pointer;
+}
+.main2 .middleBotones button img {
+  width: 180px;
+}
+
+@media (max-width: 750px) {
+  .main2 {
+    height: 65em;
+  }
+  .main2 .middleBotones {
+    flex-direction: column;
+    height: 53em;
+  }
+}
+.main3 {
+  width: 100%;
+  height: 4em;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main3 span {
+  font-weight: 300;
+  font-family: "Prompt";
+}
+
+@media (max-width: 750px) {
+  .main3 {
+    padding: 1.2em;
+  }
+}
+@media (max-width: 450px) {
+  .main3 {
+    height: 10em;
+    width: 90%;
+    padding: 0 1.2em;
+  }
+}/*# sourceMappingURL=main.css.map */
