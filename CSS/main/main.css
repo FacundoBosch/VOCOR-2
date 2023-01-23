@@ -15,6 +15,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+.loader img {
+  width: 500px;
+}
 
 .container {
   width: 100%;
@@ -65,7 +68,7 @@ body {
   padding: 0.3em 0.7em;
   transition: all 0.2s;
 }
-.upperBanner .botones button:hover {
+.upperBanner .botones .loginBut:hover, .upperBanner .botones .registerBut:hover {
   background-color: #EB5E55;
   color: white;
   cursor: pointer;
@@ -255,6 +258,16 @@ body {
   }
 }
 
+@media (max-height: 420px) and (orientation: landscape) {
+  .main1 {
+    height: 225vh;
+  }
+}
+@media (max-width: 460px) {
+  .main1 {
+    justify-content: flex-end;
+  }
+}
 @media (max-width: 376px) {
   .main1 {
     padding-top: 2.5em;
@@ -308,6 +321,11 @@ body {
   width: 180px;
 }
 
+@media (max-height: 420px) and (orientation: landscape) {
+  .main2 {
+    height: 35em;
+  }
+}
 @media (max-width: 750px) {
   .main2 {
     height: 65em;

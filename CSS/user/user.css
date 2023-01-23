@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;600&display=swap");
+.userBut {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.3em;
+  color: #EB5E55;
+  font-size: 1.2em;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  border-radius: 7px;
+  padding: 0.3em 0.7em;
+  transition: all 0.2s;
+}
+.userBut:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  scale: 1.06;
+}
+
+.userContainer {
+  z-index: 3;
+  position: absolute;
+  right: -500px;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+}
+.userContainer .userSlide {
+  right: 0;
+  height: 100vh;
+  width: 30%;
+  background-color: #EB5E55;
+  border-left: #D81E5B solid 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.userContainer .userSlide .userHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 40%;
+}
+.userContainer .userSlide .userHeader .exit {
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 2em;
+  margin-top: 1.4em;
+}
+.userContainer .userSlide .userHeader .exit svg {
+  color: #a30b3d;
+}
+.userContainer .userSlide .userHeader .exit svg:hover {
+  cursor: pointer;
+}
+.userContainer .userSlide .userHeader .profile {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -1.5em;
+  width: 100%;
+}
+.userContainer .userSlide .userHeader .profile img {
+  width: 150px;
+  border: #D81E5B solid 3px;
+  border-radius: 50%;
+  margin: 0.7em;
+}
+.userContainer .userSlide .userHeader .profile span {
+  font-family: "Prompt";
+  font-size: 1.3em;
+  font-weight: 300;
+  color: whitesmoke;
+}
+@media (max-width: 900px) {
+  .userContainer .userContainer {
+    height: 110vh;
+  }
+  .userContainer .userContainer .userSlide {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .userContainer .userSlide {
+    width: 100%;
+    border-left: none;
+  }
+}
+
+.containerAnimationIn {
+  -webkit-animation: popIn 0.5s ease-in-out forwards;
+          animation: popIn 0.5s ease-in-out forwards;
+}
+@-webkit-keyframes popIn {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-500px);
+  }
+}
+@keyframes popIn {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-500px);
+  }
+}
+
+.containerAnimationOut {
+  -webkit-animation: popOut 0.5s ease-in-out forwards;
+          animation: popOut 0.5s ease-in-out forwards;
+}
+@-webkit-keyframes popOut {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes popOut {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.actionButs {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5em;
+}
+.actionButs .eachActionBut {
+  z-index: 2;
+  height: 4em;
+  background-color: #EB5E55;
+  border: none;
+  border-bottom: solid 2px #e34457;
+  font-family: "Prompt";
+  font-size: 1.2em;
+  font-weight: 300;
+  color: whitesmoke;
+}
+.actionButs .eachActionBut:hover {
+  cursor: pointer;
+}
+.actionButs .topBut, .actionButs .botBut {
+  z-index: 1;
+  box-shadow: 0 0 0.7em #D81E5B;
+}/*# sourceMappingURL=user.css.map */

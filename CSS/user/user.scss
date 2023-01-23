@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;600&display=swap');
+
+$base-color: #EB5E55;
+$dark-base-color: #D81E5B;
+
+
+.userBut {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.3em;
+  color: $base-color;
+  font-size: 1.2em;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  border-radius: 7px;
+  padding: 0.3em 0.7em;
+  transition: all 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    scale: 1.06;
+  }
+}
+
+.userContainer {
+  z-index: 3;
+  position: absolute;
+  right: -500px;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+
+  .userSlide {
+    right: 0;
+    height: 100vh;
+    width: 30%;
+    background-color: $base-color;
+    border-left: $dark-base-color solid 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .userHeader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 40%;
+
+      .exit {
+        z-index: 3;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 2em;
+        margin-top: 1.4em;
+
+        svg {
+          color: #a30b3d;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .profile {
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: -1.5em;
+        width: 100%;
+
+        img {
+          width: 150px;
+          border: $dark-base-color solid 3px;
+          border-radius: 50%;
+          margin: 0.7em;
+        }
+  
+        span {
+          font-family: 'Prompt';
+          font-size: 1.3em;
+          font-weight: 300;
+          color: whitesmoke;
+        }
+      }
+    }
+  }
+
+  @media(max-width: 900px){ 
+    .userContainer {
+      height: 110vh;
+      .userSlide {
+        width: 50%;
+      }
+    }
+}
+  @media(max-width: 500px){ 
+    .userSlide {
+      width: 100%;
+      border-left: none;
+    }
+  }
+}
+.containerAnimationIn {
+  animation: popIn 0.5s ease-in-out forwards;
+  
+  @keyframes popIn {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(-500px);
+    }
+  }
+}
+.containerAnimationOut {
+  animation: popOut 0.5s ease-in-out forwards;
+  
+  @keyframes popOut {
+    0% {
+      transform: translateX(-500px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+}
+
+.actionButs {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5em;
+  
+
+  .eachActionBut {
+    z-index: 2;
+    height: 4em;
+    background-color: $base-color;
+    border: none;
+    border-bottom: solid 2px #e34457;
+    font-family: 'Prompt';
+    font-size: 1.2em;
+    font-weight: 300;
+    color: whitesmoke;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .topBut, .botBut {
+    z-index: 1;
+    box-shadow: 0 0 0.7em $dark-base-color;
+  }
+
+}
+
