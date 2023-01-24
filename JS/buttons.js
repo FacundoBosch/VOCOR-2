@@ -2,6 +2,6 @@ let btns = document.querySelectorAll('.plansBut')
 
 btns.forEach(btn => {
   btn.addEventListener('click', () => {
-    location.href = 'http://localhost:5500/404NotFound.html'
+    location.href = 'https://facundobosch.github.io/VOCOR-different-style/404NotFound'
   })
 })
