@@ -147,7 +147,7 @@
   height: 60%;
   display: flex;
   flex-direction: column;
-  margin-top: 1.5em;
+  margin-top: 0.6em;
 }
 .actionButs .eachActionBut {
   z-index: 2;
@@ -159,11 +159,27 @@
   font-size: 1.2em;
   font-weight: 300;
   color: whitesmoke;
+  transition: all 0.2s;
 }
 .actionButs .eachActionBut:hover {
   cursor: pointer;
+  background-color: #e34457;
 }
 .actionButs .topBut, .actionButs .botBut {
   z-index: 1;
   box-shadow: 0 0 0.7em #D81E5B;
+}
+.actionButs a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+  color: #D81E5B;
+  font-weight: 300;
+  font-family: "Prompt";
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.actionButs a:hover {
+  color: #a30b3d;
 }/*# sourceMappingURL=user.css.map */

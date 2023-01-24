@@ -263,6 +263,11 @@ body {
     height: 225vh;
   }
 }
+@media (max-width: 420px) and (min-width: 380px) {
+  .main1 {
+    height: 75vh;
+  }
+}
 @media (max-width: 460px) {
   .main1 {
     justify-content: flex-end;

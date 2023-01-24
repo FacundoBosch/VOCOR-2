@@ -108,10 +108,10 @@ $dark-base-color: #D81E5B;
     }
 }
   @media(max-width: 500px){ 
-    .userSlide {
-      width: 100%;
-      border-left: none;
-    }
+      .userSlide {
+        width: 100%;
+        border-left: none;
+      }
   }
 }
 .containerAnimationIn {
@@ -144,7 +144,7 @@ $dark-base-color: #D81E5B;
   height: 60%;
   display: flex;
   flex-direction: column;
-  margin-top: 1.5em;
+  margin-top: 0.6em;
   
 
   .eachActionBut {
@@ -157,15 +157,33 @@ $dark-base-color: #D81E5B;
     font-size: 1.2em;
     font-weight: 300;
     color: whitesmoke;
+    transition: all 0.2s;
 
     &:hover {
       cursor: pointer;
+      background-color: #e34457;
     }
   }
 
   .topBut, .botBut {
     z-index: 1;
     box-shadow: 0 0 0.7em $dark-base-color;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
+    color: $dark-base-color;
+    font-weight: 300;
+    font-family: 'Prompt';
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #a30b3d;
+    }
   }
 
 }
