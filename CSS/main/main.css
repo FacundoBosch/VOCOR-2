@@ -323,12 +323,21 @@ body {
   font-size: 1.6em;
   font-family: "Prompt";
   font-weight: 300;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 .main2 .middleBotones button:hover {
   cursor: pointer;
 }
 .main2 .middleBotones button img {
   width: 180px;
+}
+.main2 .middleBotones .goUp {
+  transform: translateY(100px);
+}
+.main2 .middleBotones .visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-height: 420px) and (orientation: landscape) {
