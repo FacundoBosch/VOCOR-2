@@ -86,10 +86,7 @@
   color: whitesmoke;
 }
 @media (max-width: 900px) {
-  .userContainer .userContainer {
-    height: 110vh;
-  }
-  .userContainer .userContainer .userSlide {
+  .userContainer .userSlide {
     width: 50%;
   }
 }

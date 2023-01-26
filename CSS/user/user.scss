@@ -100,13 +100,10 @@ $dark-base-color: #D81E5B;
   }
 
   @media(max-width: 900px){ 
-    .userContainer {
-      height: 110vh;
       .userSlide {
         width: 50%;
       }
-    }
-}
+  }
   @media(max-width: 500px){ 
       .userSlide {
         width: 100%;

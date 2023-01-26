@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;600&display=swap');
+
+$base-color: #EB5E55;
+$dark-base-color: #D81E5B;
+
+body {
+  margin: 0px;
+  padding: 0;
+}
+
+.loader {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(49, 49, 49);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 500px;
+  }
+
+}
+
+.container {
+  width: 100%;
+  height: 190vh;
+}
+
+.upperBanner {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  height: 4.5em;
+  width: 98%;
+  top: 0;
+  background-color: transparent;
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 4.5em;
+    width: 12em;
+    margin-left: 3.5em;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .botones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5em;
+    margin-right: 3em;
+
+    .loginBut, .registerBut {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0.3em;
+      color: $base-color;
+      font-size: 1.2em;
+      background-color: transparent;
+      border: 2px solid $base-color;
+      border-radius: 7px;
+      padding: 0.3em 0.7em;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: $base-color;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media (max-width: 450px){
+  .upperBanner {
+    flex-direction: column;
+
+    .logo {
+      margin: 0;
+    }
+
+    .botones {
+      margin: 0;
+      margin-top: 1em;
+    }
+  }
+}
+.mainTexture {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 40vh;
+  background-image: url("https://www.indivstock.com/static33/preview2/stock-photo-image-of-exterior-wall-texture-background-486971.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
+
+@media(max-width: 450px) {
+  .mainTexture {
+    height: 55vh;
+  }
+}
+
+.main1 {
+  width: 100%;
+  height: 40vh;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    z-index: 2;
+    margin: 0;
+    margin-bottom: -2em;
+    font-size: 4em;
+    font-family: 'Prompt';
+    font-weight: 300;
+    text-align: center;
+  }
+}
+@media(max-width: 389px) {
+  .main1 {
+    height: 55vh;
+
+    h1 {
+      font-size: 3em;
+      text-align: center;
+    }
+  }
+}
+@media(max-height: 420px) and (orientation: landscape) {
+  .main1 {
+    height: 60vh;
+  }
+}
+
+.main2 {
+  width: 100%;
+  height: 150vh;
+  background-color: rgb(234, 234, 234);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .site1, .site2, .site3 {
+    width: 70%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    span {
+      width: 60%;
+      height: 9em;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 0 0.7em rgb(113, 113, 113);
+      padding: 2em;
+      margin: 1em 0;
+      font-size: 1.5em;
+      font-family: 'Prompt';
+    }
+  }
+
+  .site2 {
+    align-items: flex-end;
+
+    span {
+      height: 4em;
+    }
+  }
+
+  .site3 {
+
+    span {
+      height: 4em;
+    }
+  }
+
+  .btnbuy {
+    height: 5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      width: 35%;
+      height: 3em;
+      background-color: #b54840;
+      border: none;
+      border-radius: 7px;
+      font-size: 1.5em;
+      font-family: 'Prompt';
+      font-weight: 600;
+      color: rgb(209, 209, 209);
+
+      &:hover {
+        cursor: not-allowed;
+      }
+
+    }
+
+    @media(max-width: 850px) {
+      button {
+        width: 55%;
+      }
+    }
+  }
+
+  @media(max-width: 850px){
+    .site1, .site2, .site3 {
+
+      span {
+        height: 12em;
+        margin: -1em 0;
+      }
+    }
+  }
+  @media(max-width: 450px){
+    .site1, .site2, .site3 {
+
+      span {
+        font-size: 1.2em;
+      }
+    }
+  }
+  @media(max-width: 362px){
+    .site1 {
+
+      span {
+        height: 18em;
+      }
+    }
+
+    .site1, .site2, .site3 {
+
+      span {
+        font-size: 1em;
+      }
+    }
+  }
+}
+@media(max-width: 850px) {
+  .main2 {
+    height: 200vh;
+  }
+}
+@media(max-height: 420px) and (orientation: landscape) {
+  .main2 {
+    height: 260vh;
+  }
+}
+.main3 {
+  width: 100%;
+  height: 4em;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-weight: 300;
+    font-family: 'Prompt';
+  }
+}
+
+@media(max-width: 750px) {
+  .main3 {
+    padding:1.2em;
+  }
+}
+
+@media(max-width: 450px) {
+  .main3 {
+    height: 10em;
+    width: 90%;
+    padding: 0 1.2em;
+  }
+}
