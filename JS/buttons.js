@@ -3,13 +3,13 @@ let linkButton2 = document.getElementById('animation2')
 let linkButton3 = document.getElementById('animation3')
 
 linkButton1.addEventListener('click', () => {
-  location.pathname = '/VOCOR-different-style/normalPlan.html'
+  location.href = 'https://facundobosch.github.io/VOCOR-different-style/normalPlan.html'
 })
 
 linkButton2.addEventListener('click', () => {
-  location.pathname = '/VOCOR-different-style/404NotFound.html'
+  location.href = 'https://facundobosch.github.io/VOCOR-different-style/404NotFound.html'
 })
 
 linkButton3.addEventListener('click', () => {
-  location.pathname = '/VOCOR-different-style/404NotFound.html'
+  location.href = 'https://facundobosch.github.io/VOCOR-different-style/404NotFound.html'
 })
