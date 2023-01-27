@@ -1,11 +1,12 @@
-const btnAnimation1 = document.getElementById('btnPlan1')
-const btnAnimation2 = document.getElementById('btnPlan2')
-const btnAnimation3 = document.getElementById('btnPlan3')
+const Animation1 = document.getElementById('animation1')
+const Animation2 = document.getElementById('animation2')
+const Animation3 = document.getElementById('animation3')
 
 const cargarImagen = (entradas, observador) => {
 
 	entradas.forEach((entrada) => {
 		if(entrada.isIntersecting){
+      console.log('visible');
 			entrada.target.classList.add('visible')
 		}
 	})
@@ -17,6 +18,6 @@ const observador = new IntersectionObserver(cargarImagen, {
 	threshold: 1.0
 })
 
-observador.observe(btnAnimation1)
-observador.observe(btnAnimation2)
-observador.observe(btnAnimation3)
+observador.observe(Animation1)
+observador.observe(Animation2)
+observador.observe(Animation3)

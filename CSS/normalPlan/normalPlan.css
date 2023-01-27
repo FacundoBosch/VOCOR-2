@@ -24,6 +24,11 @@ body {
   height: 190vh;
 }
 
+@media (min-width: 400px) and (max-width: 1200px) {
+  .container {
+    height: 170vh;
+  }
+}
 .upperBanner {
   z-index: 1;
   position: absolute;
@@ -121,11 +126,12 @@ body {
   text-align: center;
 }
 
-@media (max-width: 389px) {
+@media (max-width: 450px) {
   .main1 {
     height: 55vh;
   }
   .main1 h1 {
+    margin-top: 2.5em;
     font-size: 3em;
     text-align: center;
   }
@@ -162,6 +168,30 @@ body {
   margin: 1em 0;
   font-size: 1.5em;
   font-family: "Prompt";
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.main2 .site1 .goLeft, .main2 .site2 .goLeft, .main2 .site3 .goLeft {
+  transform: translateX(100px);
+}
+.main2 .site1 .goRight, .main2 .site2 .goRight, .main2 .site3 .goRight {
+  transform: translateX(-100px);
+}
+.main2 .site1 .visible, .main2 .site2 .visible, .main2 .site3 .visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (max-width: 500px) {
+  .main2 .site1 .goLeft, .main2 .site2 .goLeft, .main2 .site3 .goLeft {
+    transform: translateX(50px);
+  }
+  .main2 .site1 .goRight, .main2 .site2 .goRight, .main2 .site3 .goRight {
+    transform: translateX(-50px);
+  }
+  .main2 .site1 .visible, .main2 .site2 .visible, .main2 .site3 .visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .main2 .site2 {
   align-items: flex-end;
@@ -221,6 +251,14 @@ body {
 @media (max-width: 850px) {
   .main2 {
     height: 200vh;
+  }
+}
+@media (min-width: 400px) and (max-width: 1200px) {
+  .main2 {
+    height: 130vh;
+  }
+  .main2 .btnbuy {
+    margin-top: -1.3em;
   }
 }
 @media (max-height: 420px) and (orientation: landscape) {
