@@ -1,6 +1,7 @@
 const Animation1 = document.getElementById('animation1')
 const Animation2 = document.getElementById('animation2')
 const Animation3 = document.getElementById('animation3')
+const Animation4 = document.getElementById('animation4')
 
 const cargarImagen = (entradas, observador) => {
 
@@ -21,3 +22,8 @@ const observador = new IntersectionObserver(cargarImagen, {
 observador.observe(Animation1)
 observador.observe(Animation2)
 observador.observe(Animation3)
+try {
+  observador.observe(Animation4)
+} catch (error) {
+  console.log(error);
+}
