@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;600&display=swap");
+body {
+  margin: 0px;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 250vh;
+}
+
+@media (min-width: 400px) and (max-width: 1200px) {
+  .container {
+    height: 210vh;
+  }
+}
+.main2 {
+  width: 100%;
+  height: 230vh;
+  background-color: rgb(234, 234, 234);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main2 .site1, .main2 .site2, .main2 .site3, .main2 .site4, .main2 .site5 {
+  width: 70%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.main2 .site1 span, .main2 .site2 span, .main2 .site3 span, .main2 .site4 span, .main2 .site5 span {
+  width: 60%;
+  height: 9em;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 0.7em rgb(113, 113, 113);
+  padding: 2em;
+  margin: 1em 0;
+  font-size: 1.5em;
+  font-family: "Prompt";
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.main2 .site1 .goLeft, .main2 .site2 .goLeft, .main2 .site3 .goLeft, .main2 .site4 .goLeft, .main2 .site5 .goLeft {
+  transform: translateX(100px);
+}
+.main2 .site1 .goRight, .main2 .site2 .goRight, .main2 .site3 .goRight, .main2 .site4 .goRight, .main2 .site5 .goRight {
+  transform: translateX(-100px);
+}
+.main2 .site1 .visible, .main2 .site2 .visible, .main2 .site3 .visible, .main2 .site4 .visible, .main2 .site5 .visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (max-width: 500px) {
+  .main2 .site1 .goLeft, .main2 .site2 .goLeft, .main2 .site3 .goLeft, .main2 .site4 .goLeft, .main2 .site5 .goLeft {
+    transform: translateX(50px);
+  }
+  .main2 .site1 .goRight, .main2 .site2 .goRight, .main2 .site3 .goRight, .main2 .site4 .goRight, .main2 .site5 .goRight {
+    transform: translateX(-50px);
+  }
+  .main2 .site1 .visible, .main2 .site2 .visible, .main2 .site3 .visible, .main2 .site4 .visible, .main2 .site5 .visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.main2 .site2, .main2 .site4 {
+  align-items: flex-end;
+}
+.main2 .site2 span, .main2 .site4 span {
+  height: 4em;
+}
+.main2 .site3 span, .main2 .site4 span, .main2 .site5 span {
+  height: 5em;
+}
+.main2 .btnbuy {
+  height: 5em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main2 .btnbuy button {
+  width: 35%;
+  height: 3em;
+  background-color: #b54840;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.5em;
+  font-family: "Prompt";
+  font-weight: 600;
+  color: rgb(209, 209, 209);
+}
+.main2 .btnbuy button:hover {
+  cursor: not-allowed;
+}
+@media (max-width: 850px) {
+  .main2 .btnbuy button {
+    width: 55%;
+  }
+}
+@media (max-width: 850px) {
+  .main2 .site1 span, .main2 .site2 span, .main2 .site3 span {
+    height: 12em;
+    margin: -1em 0;
+  }
+  .main2 .site4 span, .main2 .site5 span {
+    height: 12em;
+    margin: -1em 0;
+  }
+}
+@media (max-width: 450px) {
+  .main2 .site1 span, .main2 .site2 span, .main2 .site3 span {
+    font-size: 1.2em;
+  }
+  .main2 .site4 span, .main2 .site5 span {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 362px) {
+  .main2 .site1 span {
+    height: 18em;
+  }
+  .main2 .site1 span, .main2 .site2 span, .main2 .site3 span {
+    font-size: 1em;
+  }
+  .main2 .site4 span {
+    height: 15em;
+  }
+  .main2 .site4 span, .main2 .site5 span {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 850px) {
+  .main2 {
+    height: 270vh;
+  }
+}
+@media (min-width: 400px) and (max-width: 1200px) {
+  .main2 {
+    height: 220vh;
+  }
+  .main2 .btnbuy {
+    margin-top: -1.3em;
+  }
+}
+@media (max-height: 420px) and (orientation: landscape) {
+  .main2 {
+    height: 310vh;
+  }
+}/*# sourceMappingURL=premiumPlan.css.map */

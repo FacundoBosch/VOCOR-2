@@ -7,9 +7,9 @@ linkButton1.addEventListener('click', () => {
 })
 
 linkButton2.addEventListener('click', () => {
-  location.href = 'https://facundobosch.github.io/VOCOR-different-style/404NotFound.html'
+  location.href = 'https://facundobosch.github.io/VOCOR-different-style/proPlan.html'
 })
 
 linkButton3.addEventListener('click', () => {
-  location.href = 'https://facundobosch.github.io/VOCOR-different-style/404NotFound.html'
+  location.href = 'https://facundobosch.github.io/VOCOR-different-style/premiumPlan.html'
 })

@@ -2,6 +2,7 @@ const Animation1 = document.getElementById('animation1')
 const Animation2 = document.getElementById('animation2')
 const Animation3 = document.getElementById('animation3')
 const Animation4 = document.getElementById('animation4')
+const Animation5 = document.getElementById('animation5')
 
 const cargarImagen = (entradas, observador) => {
 
@@ -24,6 +25,7 @@ observador.observe(Animation2)
 observador.observe(Animation3)
 try {
   observador.observe(Animation4)
+  observador.observe(Animation5)
 } catch (error) {
   console.log(error);
 }

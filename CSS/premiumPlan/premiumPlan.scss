@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;600&display=swap');
+
+$base-color: #EB5E55;
+$dark-base-color: #D81E5B;
+
+body {
+  margin: 0px;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 250vh;
+}
+@media(min-width: 400px) and (max-width: 1200px) {
+  .container {
+    height: 210vh;
+  }
+}
+
+.main2 {
+  width: 100%;
+  height: 230vh;
+  background-color: rgb(234, 234, 234);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .site1, .site2, .site3, .site4, .site5 {
+    width: 70%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    span {
+      width: 60%;
+      height: 9em;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 0 0.7em rgb(113, 113, 113);
+      padding: 2em;
+      margin: 1em 0;
+      font-size: 1.5em;
+      font-family: 'Prompt';
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .goLeft {
+      transform: translateX(100px);
+    }
+  
+    .goRight {
+      transform: translateX(-100px);
+    }
+  
+    .visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @media(max-width: 500px) {
+      .goLeft {
+        transform: translateX(50px);
+      }
+    
+      .goRight {
+        transform: translateX(-50px);
+      }
+
+      .visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .site2, .site4 {
+    align-items: flex-end;
+
+    span {
+      height: 4em;
+    }
+  }
+
+  .site3, .site4, .site5 {
+
+    span {
+      height: 5em;
+    }
+  }
+
+  .btnbuy {
+    height: 5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      width: 35%;
+      height: 3em;
+      background-color: #b54840;
+      border: none;
+      border-radius: 7px;
+      font-size: 1.5em;
+      font-family: 'Prompt';
+      font-weight: 600;
+      color: rgb(209, 209, 209);
+
+      &:hover {
+        cursor: not-allowed;
+      }
+
+    }
+
+    @media(max-width: 850px) {
+      button {
+        width: 55%;
+      }
+    }
+  }
+
+  @media(max-width: 850px){
+    .site1, .site2, .site3 {
+
+      span {
+        height: 12em;
+        margin: -1em 0;
+      }
+    }
+
+    .site4, .site5 {
+      span {
+        height: 12em;
+        margin: -1em 0;
+      }
+    }
+  }
+  @media(max-width: 450px){
+    .site1, .site2, .site3 {
+
+      span {
+        font-size: 1.2em;
+      }
+    }
+    .site4, .site5 {
+      span {
+        font-size: 1.2em;
+      }
+    }
+  }
+  @media(max-width: 362px){
+    .site1 {
+      span {
+        height: 18em;
+      }
+    }
+
+    .site1, .site2, .site3 {
+      span {
+        font-size: 1em;
+      }
+    }
+
+    .site4 {
+      span {
+        height: 15em;
+      }
+    }
+    .site4, .site5 {
+      span {
+        font-size: 1em;
+      }
+    }
+  }
+}
+@media(max-width: 850px) {
+  .main2 {
+    height: 270vh;
+  }
+}
+@media(min-width: 400px) and (max-width: 1200px) {
+  .main2 {
+    height: 220vh;
+
+    .btnbuy {
+      margin-top: -1.3em;
+    }
+  }
+}
+@media(max-height: 420px) and (orientation: landscape) {
+  .main2 {
+    height: 310vh;
+  }
+}
