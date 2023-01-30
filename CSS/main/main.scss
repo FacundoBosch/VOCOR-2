@@ -22,7 +22,14 @@ body {
   img {
     width: 500px;
   }
+}
 
+@media(max-width: 450px) {
+  .loader {
+    img {
+      width: 300px;
+    }
+  }
 }
 
 .container {
@@ -138,9 +145,10 @@ body {
       background-image: linear-gradient(
         -225deg,
         #EB5E55 0%,
-        #D81E5B 29%,
-        #EB5E55 67%,
-        #D81E5B 100%
+        #D81E5B 25%,
+        #EB5E55 50%,
+        #D81E5B 75%,
+        #EB5E55 100%
       );
       background-size: auto auto;
       background-clip: border-box;
@@ -278,8 +286,120 @@ body {
   }
 }
 
+.mainTexture2 {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 70vh;
+  background-image: url("https://cdn.wallpapersafari.com/95/63/MjZVHF.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+}
 
 .main2 {
+  width: 100%;
+  height: 70vh;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .spaceLeft{
+    z-index: 1;
+    margin-left: 4em;
+    padding: 2em;
+    width: 30em;
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+
+    h1 {
+      font-family: 'Nunito';
+      font-size: 3em;
+      margin: 0;
+      background-image: linear-gradient(
+        -225deg,
+        #EB5E55 0%,
+        #D81E5B 25%,
+        #EB5E55 50%,
+        #D81E5B 75%,
+        #EB5E55 100%
+      );
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #fff;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 2s linear infinite;
+      display: inline-block;
+    }
+    @keyframes textclip {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    p {
+      font-family: 'Prompt';
+      font-size: 1.2em;
+
+      b {
+        color: $dark-base-color;
+      }
+    }
+  }
+
+  .goLeft {
+    transform: translateX(-50px);
+  }
+
+  .visible {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  .spaceRight {
+    img {
+      width: 820px;
+    }
+  }
+}
+
+@media(max-width: 1200px) {
+  .main2 {
+    justify-content: center;
+
+    .spaceLeft {
+      margin: 0;
+      text-align: center;
+    }
+
+    .goLeft {
+      transform: translateY(50px);
+    }
+  
+    .visible {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    .spaceRight {
+      position: absolute;
+      opacity: 0.3;
+    }
+  }
+}
+
+@media(max-width: 850px) {
+  .main2 {
+    justify-content: flex-end;
+  }
+}
+
+.main3 {
   width: 100%;
   height: 65vh;
   background-color: rgb(234, 234, 234);
@@ -344,13 +464,13 @@ body {
   }
 }
 @media(max-height: 420px) and (orientation: landscape) {
-  .main2 {
+  .main3 {
     height: 35em;
   }
 }
 
 @media(max-width: 750px) {
-  .main2 {
+  .main3 {
     height: 65em;
 
     .middleBotones {
@@ -359,7 +479,7 @@ body {
     }
   }
 }
-.main3 {
+.main4 {
   width: 100%;
   height: 4em;
   background-color: whitesmoke;
@@ -374,13 +494,13 @@ body {
 }
 
 @media(max-width: 750px) {
-  .main3 {
+  .main4 {
     padding:1.2em;
   }
 }
 
 @media(max-width: 450px) {
-  .main3 {
+  .main4 {
     height: 10em;
     width: 90%;
     padding: 0 1.2em;
